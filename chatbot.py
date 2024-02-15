@@ -68,6 +68,7 @@ def hello_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /hello is issued."""
     try:
         update.message.reply_text(f'Good day, {context.args[0]}!')
+        
     except (IndexError, ValueError):
         update.message.reply_text('Usage: /hello <keyword>')
 
